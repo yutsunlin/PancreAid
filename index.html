@@ -14,11 +14,11 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:14px}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:15px;-webkit-text-size-adjust:100%}
 
 /* ── TOP TAB BAR ── */
-.tab-bar{position:sticky;top:0;z-index:200;background:rgba(17,31,62,0.97);backdrop-filter:blur(8px);display:flex;border-bottom:2px solid rgba(255,255,255,0.08)}
-.tab-btn{flex:1;padding:15px 8px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.45);border:none;background:none;cursor:pointer;letter-spacing:0.04em;transition:all 0.2s;border-bottom:3px solid transparent;position:relative;top:2px;font-family:'Noto Sans TC',sans-serif;display:flex;align-items:center;justify-content:center;gap:5px}
+.tab-bar{position:sticky;top:0;z-index:200;background:rgba(17,31,62,0.97);backdrop-filter:blur(8px);display:flex;border-bottom:2px solid rgba(255,255,255,0.08);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tab-bar::-webkit-scrollbar{display:none}
+.tab-btn{flex:0 0 auto;min-width:70px;padding:14px 12px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.45);border:none;background:none;cursor:pointer;letter-spacing:0.04em;transition:all 0.2s;border-bottom:3px solid transparent;position:relative;top:2px;font-family:'Noto Sans TC',sans-serif;display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;-webkit-tap-highlight-color:transparent}
 .tab-btn .tab-icon{font-size:14px}
 .tab-btn.active{color:#fff;border-bottom-color:var(--gold)}
 .tab-btn:hover:not(.active){color:rgba(255,255,255,0.75)}
@@ -26,7 +26,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--i
 .tab-content.active{display:block}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(150deg,var(--navy-d) 0%,var(--navy) 55%,#0f4a45 100%);color:white;padding:40px 24px 36px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(150deg,var(--navy-d) 0%,var(--navy) 55%,#0f4a45 100%);color:white;padding:28px 16px 24px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
 .hero-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:32px;position:relative}
 .hero-img-wrap{flex-shrink:0;width:140px;height:140px;border-radius:14px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -41,10 +41,10 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--i
 .hero-specs{display:flex;flex-wrap:wrap;gap:18px}
 .spec-item strong{display:block;color:#fff;font-size:15px;font-weight:700;line-height:1.2}
 .spec-item{font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:0.05em}
-@media(max-width:580px){.hero-inner{flex-direction:column;align-items:flex-start}.hero-img-wrap{width:100%;height:160px}}
+@media(max-width:580px){.hero-inner{flex-direction:row;align-items:center;gap:16px}.hero-img-wrap{width:90px;height:90px;flex-shrink:0}.hero h1{font-size:1.4rem}.hero-eyebrow{font-size:9px}.hero-en{font-size:11px;margin-bottom:10px}.hero-specs{gap:12px}.spec-item strong{font-size:13px}}
 
 /* ── CONTAINER ── */
-.container{max-width:960px;margin:0 auto;padding:28px 16px 80px}
+.container{max-width:960px;margin:0 auto;padding:20px 14px 80px}
 
 /* ── SECTION TITLE ── */
 .sec-title{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:700;color:var(--navy);border-left:4px solid var(--navy);padding-left:10px;margin:32px 0 14px;display:flex;align-items:center;gap:8px}
@@ -55,23 +55,23 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--i
 .card-label{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
 /* ── DOSE BOX ── */
-.dose-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.dose-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
 .dose-card{border-radius:12px;padding:18px;border:1px solid var(--border);background:var(--surface)}
 .dose-card.dog{border-top:4px solid var(--navy-l)}.dose-card.cat{border-top:4px solid var(--teal)}
 .dose-animal{font-size:1.4rem;margin-bottom:4px}
 .dose-title{font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:10px}
-.dose-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed var(--border);font-size:.82rem}
+.dose-row{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:1px dashed var(--border);font-size:.82rem;gap:8px}
 .dose-row:last-child{border-bottom:none}
 .dose-row .label{color:var(--muted)}
-.dose-row .value{font-weight:700;color:var(--ink)}
+.dose-row .value{font-weight:700;color:var(--ink);text-align:right;flex-shrink:0}
 .dose-note{margin-top:10px;font-size:.75rem;color:var(--muted);line-height:1.6;padding:8px 10px;background:var(--surface2);border-radius:7px}
 
 /* ── TIMING BOX ── */
-.timing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.timing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
 .timing-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
 .timing-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px}
-.timing-body .timing-title{font-weight:700;font-size:.85rem;color:var(--ink);margin-bottom:4px}
-.timing-body .timing-desc{font-size:.77rem;color:var(--muted);line-height:1.6}
+.timing-body .timing-title{font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:4px;line-height:1.4}
+.timing-body .timing-desc{font-size:.80rem;color:var(--muted);line-height:1.65}
 .timing-item.highlight{background:var(--teal-l);border-color:var(--teal-m)}
 .timing-item.caution{background:var(--amber-l);border-color:var(--amber)}
 
@@ -97,7 +97,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--i
 .guide-block{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:14px}
 .guide-block-title{font-family:'Noto Serif TC',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .point-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
-.point-list li{display:flex;align-items:flex-start;gap:10px;font-size:.82rem;line-height:1.7}
+.point-list li{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;line-height:1.75}
 .point-list li::before{content:'▸';color:var(--teal-m);flex-shrink:0;margin-top:2px;font-size:.85rem}
 .point-list li strong{color:var(--ink)}
 .ref-footer{margin-top:28px;padding:16px 20px;background:var(--surface2);border-radius:10px;border:1px solid var(--border);font-size:.72rem;color:var(--muted);line-height:1.85}
@@ -110,10 +110,10 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--i
 
 /* ── PAGE 3 TABLE ── */
 .tbl-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:.78rem;min-width:560px}
+table{width:100%;border-collapse:collapse;font-size:.76rem;min-width:520px}
 th{background:var(--navy);color:#fff;padding:10px 12px;text-align:center;font-weight:600;font-size:.76rem}
 th:first-child{text-align:left}
-td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);text-align:center;vertical-align:middle}
+td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--muted);text-align:center;vertical-align:middle;line-height:1.5}
 td:first-child{text-align:left;font-weight:600;color:var(--ink)}
 tr:nth-child(even) td{background:var(--surface2)}
 .highlight-row td{background:var(--teal-l)!important;color:var(--ink)!important}.highlight-row td:first-child{color:var(--teal)}
@@ -126,10 +126,10 @@ tr:nth-child(even) td{background:var(--surface2)}
 .qna-q{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;cursor:pointer;transition:background .15s}
 .qna-q:hover{background:var(--surface2)}
 .q-badge{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;margin-top:1px}
-.q-text{flex:1;min-width:0;font-weight:600;font-size:.9rem;color:var(--ink);line-height:1.45}
+.q-text{flex:1;min-width:0;font-weight:600;font-size:.92rem;color:var(--ink);line-height:1.5}
 .q-arrow{flex-shrink:0;color:var(--muted);transition:transform .25s;font-size:.8rem;padding-top:3px}
 .qna-item.open .q-arrow{transform:rotate(180deg)}
-.qna-a{display:none;padding:14px 18px 18px 58px;font-size:.82rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--border)}
+.qna-a{display:none;padding:14px 16px 18px 16px;font-size:.84rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--border)}
 .qna-item.open .qna-a{display:block}
 .qna-a ul{padding:0;margin:8px 0;list-style:none}
 .qna-a li{padding-left:14px;position:relative;margin-bottom:5px}
@@ -155,8 +155,17 @@ tr:nth-child(even) td{background:var(--surface2)}
 .ing-detail li::before{content:"▸";position:absolute;left:0;color:var(--muted);font-size:.7rem}
 
 @media(max-width:480px){
-  .tab-btn{font-size:10px;padding:12px 4px}
-  .tab-btn .tab-icon{display:none}
+  .tab-btn{font-size:11px;padding:13px 10px;min-width:60px}
+  .tab-btn .tab-icon{font-size:13px}
+  .sec-title{font-size:.95rem;margin:24px 0 12px}
+  .card{padding:16px}
+  .guide-block{padding:16px}
+  .triple-card{padding:14px 13px}
+  .evidence-banner{padding:16px}
+  .ref-footer{padding:12px 14px}
+  .qna-q{padding:14px}
+  .ladder-step{padding:14px}
+  .info-box{padding:12px 14px;font-size:.82rem}
 }
 </style>
 
@@ -176,15 +185,15 @@ tr:nth-child(even) td{background:var(--surface2)}
         <img src="PancreAid.jpg" alt="PancreAid EX" onerror="this.parentElement.innerHTML='<div class=hero-img-placeholder><div style=font-size:2rem>💊</div><div>產品圖片<br>PancreAid.jpg</div></div>'">
       </div>
       <div class="hero-text">
-        <div class="hero-eyebrow">Triple-Action Synergistic Formula</div>
+        <div class="hero-eyebrow">Four-Track Synergistic Formula</div>
         <h1>胰錠強 EX</h1>
-        <div class="hero-en">PancreAid EX · 三位一體多軌協同配方</div>
+        <div class="hero-en">PancreAid EX · 四大照護配方</div>
         <div class="hero-tags">
           <span class="hero-tag">慢性胰臟炎</span>
-          <span class="hero-tag">急性恢復期</span>
           <span class="hero-tag">慢性腸炎 CIE</span>
           <span class="hero-tag">外分泌功能不足 EPI</span>
-          <span class="hero-tag">消化吸收不良</span>
+          <span class="hero-tag">胰臟炎預後長期護理</span>
+          <span class="hero-tag">預防性護理</span>
         </div>
         <div class="hero-specs">
           <div class="spec-item"><strong>300 mg／錠</strong>劑型規格</div>
@@ -198,7 +207,7 @@ tr:nth-child(even) td{background:var(--surface2)}
 
   <div class="container">
 
-    <div class="sec-title">⚙️ 三位一體配方機轉</div>
+    <div class="sec-title">⚙️ 四大照護配方機轉</div>
     <div class="triple-grid">
       <div class="triple-card c1">
         <div class="triple-head">
@@ -251,7 +260,24 @@ tr:nth-child(even) td{background:var(--surface2)}
         <ul class="ing-detail">
           <li>支持黏膜代謝與膽汁形成</li>
           <li>牛磺酸為貓必需胺基酸（心臟保護）</li>
-          <li>GRX02 同步穩定腸道菌叢</li>
+        </ul>
+      </div>
+      <div class="triple-card" style="border-top:4px solid #6366f1">
+        <div class="triple-head">
+          <div class="triple-num" style="background:#6366f1">④</div>
+          <div><div class="triple-label">腸道菌叢調節</div><div class="triple-sub">Gut Microbiome Modulation</div></div>
+        </div>
+        <div class="ing-name">專利 GRX02 護肝益生菌</div>
+        <ul class="ing-detail">
+          <li>選擇性促進有益菌（Lactobacillus / Bifidobacterium）增殖</li>
+          <li>抑制伺機性病原菌過度生長（Dysbiosis）</li>
+          <li>強化腸道黏膜屏障（Tight Junction 蛋白表現）</li>
+        </ul>
+        <div class="ing-name">日本專利納豆菌（Bacillus subtilis natto）</div>
+        <ul class="ing-detail">
+          <li>形成芽孢、耐胃酸，活菌到達迴腸發揮作用</li>
+          <li>分泌短鏈脂肪酸（SCFA）滋養腸上皮細胞</li>
+          <li>協同 GRX02 雙軌穩定腸道生態</li>
         </ul>
       </div>
     </div>
@@ -282,38 +308,38 @@ tr:nth-child(even) td{background:var(--surface2)}
     <div class="sec-title">⏱ 使用時機</div>
     <div class="timing-grid">
       <div class="timing-item highlight">
-        <div class="timing-icon">✅</div>
+        <div class="timing-icon">🔥</div>
         <div class="timing-body">
-          <div class="timing-title">急性期穩定後、開始少量進食時</div>
-          <div class="timing-desc">禁食解除後隨餐開始，提供消化支持 + 抗氧化保護，協助胰臟恢復。</div>
+          <div class="timing-title">慢性胰臟炎</div>
+          <div class="timing-desc">與每餐同時給予，長期使用。犬搭配低脂飲食；貓搭配高消化率糧食。四大配方同步抑制持續性氧化損傷與腸道菌相失調。</div>
         </div>
       </div>
       <div class="timing-item highlight">
-        <div class="timing-icon">🔄</div>
+        <div class="timing-icon">🦠</div>
         <div class="timing-body">
-          <div class="timing-title">慢性胰臟炎長期管理</div>
-          <div class="timing-desc">與每餐同時給予，長期使用。犬搭配低脂飲食；貓搭配水解蛋白糧。</div>
-        </div>
-      </div>
-      <div class="timing-item">
-        <div class="timing-icon">🐾</div>
-        <div class="timing-body">
-          <div class="timing-title">高風險品種日常保健</div>
-          <div class="timing-desc">雪納瑞、約克夏、貴賓等遺傳性高血脂品種，作為預防性長期補充。</div>
-        </div>
-      </div>
-      <div class="timing-item">
-        <div class="timing-icon">🐱</div>
-        <div class="timing-body">
-          <div class="timing-title">貓三體炎 / IBD 共病管理</div>
-          <div class="timing-desc">合併慢性腸炎、膽管肝炎的貓，B12 及腸道保護尤為重要。</div>
+          <div class="timing-title">慢性腸炎（CIE / IBD）</div>
+          <div class="timing-desc">針對慢性腸炎、貓三體炎（Triaditis）、膽管肝炎共病：GRX02 調節腸道免疫；B12 補充防範黏膜萎縮。</div>
         </div>
       </div>
       <div class="timing-item">
         <div class="timing-icon">📉</div>
         <div class="timing-body">
-          <div class="timing-title">繼發性 EPI 補充</div>
-          <div class="timing-desc">慢性胰臟炎晚期腺泡細胞嚴重耗損時，提升劑量至 PERT 標準。</div>
+          <div class="timing-title">外分泌功能不足（EPI）</div>
+          <div class="timing-desc">配合 Spec TLI 確診後提升劑量至 PERT 標準（犬 7–10 錠／餐；貓 2–7 錠／餐），補足酵素缺口。</div>
+        </div>
+      </div>
+      <div class="timing-item">
+        <div class="timing-icon">🔄</div>
+        <div class="timing-body">
+          <div class="timing-title">胰臟炎預後長期護理</div>
+          <div class="timing-desc">急性發作後進入恢復期、禁食解除開始進食即可投予；抗氧化 + 腸道修復，防範再發與慢性化。</div>
+        </div>
+      </div>
+      <div class="timing-item">
+        <div class="timing-icon">🛡️</div>
+        <div class="timing-body">
+          <div class="timing-title">預防性護理</div>
+          <div class="timing-desc">雪納瑞、約克夏、貴賓等高風險品種，或老年犬貓，作為日常預防性長期補充，降低慢性化風險。</div>
         </div>
       </div>
       <div class="timing-item caution">
@@ -337,8 +363,8 @@ tr:nth-child(even) td{background:var(--surface2)}
       <div class="ladder-step s2">
         <div class="step-num">2</div>
         <div class="step-body">
-          <div class="step-title">胰錠強EX 三位一體全方位保護（核心）</div>
-          <div class="step-desc">適量酵素（不刺激黏膜）＋ 抗氧化（Vit E + GRX02）＋ 補充 B12 &amp; B群<br><em>衛教比喻：「不只請工人幫忙做家事，更要修復破損的房子。」</em></div>
+          <div class="step-title">胰錠強 EX 四大照護配方全方位保護（核心）</div>
+          <div class="step-desc">適量酵素（不刺激黏膜）＋ 抗氧化 Vit E ＋ 補充 B12 &amp; B群 ＋ GRX02 調節腸道菌叢<br><em>衛教比喻：「不只請工人幫忙做家事，更要修復破損的房子，還要維護整個管線系統。」</em></div>
         </div>
       </div>
       <div class="ladder-step s3">
@@ -351,11 +377,11 @@ tr:nth-child(even) td{background:var(--surface2)}
     </div>
 
     <div class="ref-footer">
-      <h4>文獻來源（請獨立核實）</h4>
+      <h4>文獻來源</h4>
       [1] ACVIM Consensus Statement on Pancreatitis in Dogs. J Vet Intern Med. 2021.<br>
       [2] Steiner JM. Exocrine Pancreatic Disease. In: Ettinger's Textbook of Veterinary Internal Medicine, 9th Ed.<br>
       [3] ISFM Guidelines for Feline Pancreatitis. J Feline Med Surg. 2022.
-      <div class="disclaimer">⚠ 本資料為醫事人員內部教育訓練用途，不得轉載或搭配行銷推廣使用。文獻引用均來自產品資料提供方，建議使用前獨立查驗文獻正確性。</div>
+      <div class="disclaimer">⚠ 本資料為醫事人員內部教育訓練用途，不得轉載或搭配行銷推廣使用。</div>
     </div>
   </div>
 </div>
@@ -473,14 +499,15 @@ tr:nth-child(even) td{background:var(--surface2)}
         </thead>
         <tbody>
           <tr><td>主要病因</td><td>高脂血症・飲食脂肪・肥胖</td><td>特發性為主；腸胃共病（三體炎）</td></tr>
-          <tr><td>慢性期飲食</td><td class="good">極低脂糧 &lt;10–12% DM</td><td class="warn">水解蛋白糧（非低脂）</td></tr>
+          <tr><td>慢性期飲食</td><td class="good">極低脂糧 &lt;10–12% DM</td><td class="warn">高消化率糧 / 水解蛋白糧<br><span style="font-size:.7rem;color:var(--muted)">不需極端限脂；水解蛋白為選項之一</span></td></tr>
           <tr><td>常見共病</td><td>高血脂、糖尿病、Cushing's</td><td>IBD + 膽管肝炎（三體炎 &gt;60%）</td></tr>
           <tr><td>疼痛表現</td><td>明顯：弓背、祈禱姿</td><td>隱晦：不吃、母雞蹲、精神差</td></tr>
           <tr><td>止吐首選</td><td colspan="2" style="text-align:center">Maropitant（NK-1，兼具止痛）</td></tr>
-          <tr><td>止痛首選（急性）</td><td>Fentanyl CRI</td><td>Buprenorphine</td></tr>
-          <tr><td>止痛（慢性）</td><td>Ketamine / Lidocaine CRI</td><td>Gabapentin（長期控制）</td></tr>
-          <tr><td>B12 缺乏風險</td><td>中等</td><td class="bad">高（IF 主要由胰臟分泌）</td></tr>
-          <tr><td>早期腸道營養</td><td>&gt;72h 未進食放鼻胃管</td><td>&gt;48h 未進食放鼻胃管</td></tr>
+          
+          <tr><td>止痛（急性重症）</td><td>Fentanyl CRI + Ketamine / Lidocaine CRI<br><span style="font-size:.7rem;color:var(--muted)">住院多模式止痛（Multimodal）</span></td><td>Buprenorphine<br><span style="font-size:.7rem;color:var(--muted)">住院期間</span></td></tr>
+          <tr><td>止痛（慢性居家）</td><td>Gabapentin</td><td>Gabapentin（長期控制）</td></tr>
+          <tr><td>B12 缺乏風險</td><td>中等</td><td class="bad">高（貓 IF 100% 由胰臟分泌；胃壁細胞完全不分泌）</td></tr>
+          <tr><td>早期腸道營養</td><td>&gt;24–48h 未進食即評估放管</td><td>&gt;24–48h 未進食積極放管<br><span style="font-size:.7rem;color:var(--muted)">預防脂肪肝（Hepatic Lipidosis）</span></td></tr>
           <tr><td>EPI 好發性</td><td>中等（GSD 等品種較高）</td><td>低（但一旦發生 B12 更嚴重）</td></tr>
         </tbody>
       </table>
