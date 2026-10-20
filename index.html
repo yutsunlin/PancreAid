@@ -141,13 +141,13 @@ tr:nth-child(even) td{background:var(--surface2)}
 .qna-a .caution-box{background:var(--amber-l);border-radius:8px;padding:11px 14px;margin:10px 0;font-size:.78rem;border-left:3px solid var(--amber);line-height:1.75}
 
 /* ── TRIPLE GRID ── */
-.triple-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:10px}
-@media(max-width:700px){.triple-grid{grid-template-columns:1fr}}
+.triple-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px}
+@media(max-width:580px){.triple-grid{grid-template-columns:1fr}}
 .triple-card{border-radius:14px;padding:18px 16px;border:1px solid var(--border);background:var(--surface)}
-.triple-card.c1{border-top:4px solid var(--navy-l)}.triple-card.c2{border-top:4px solid var(--amber)}.triple-card.c3{border-top:4px solid var(--teal)}
+.triple-card.c1{border-top:4px solid var(--navy-l)}.triple-card.c2{border-top:4px solid var(--amber)}.triple-card.c3{border-top:4px solid var(--teal)}.triple-card.c4{border-top:4px solid #6366f1}
 .triple-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .triple-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;color:#fff}
-.c1 .triple-num{background:var(--navy-l)}.c2 .triple-num{background:var(--amber)}.c3 .triple-num{background:var(--teal)}
+.c1 .triple-num{background:var(--navy-l)}.c2 .triple-num{background:var(--amber)}.c3 .triple-num{background:var(--teal)}.c4 .triple-num{background:#6366f1}
 .triple-label{font-size:.82rem;font-weight:700;color:var(--ink)}.triple-sub{font-size:.68rem;color:var(--muted);margin-top:1px}
 .ing-name{font-size:.79rem;font-weight:700;color:var(--ink);margin:8px 0 4px}
 .ing-detail{font-size:.73rem;color:var(--muted);line-height:1.65;list-style:none;padding:0}
@@ -262,9 +262,9 @@ tr:nth-child(even) td{background:var(--surface2)}
           <li>牛磺酸為貓必需胺基酸（心臟保護）</li>
         </ul>
       </div>
-      <div class="triple-card" style="border-top:4px solid #6366f1">
+      <div class="triple-card c4">
         <div class="triple-head">
-          <div class="triple-num" style="background:#6366f1">④</div>
+          <div class="triple-num">④</div>
           <div><div class="triple-label">腸道菌叢調節</div><div class="triple-sub">Gut Microbiome Modulation</div></div>
         </div>
         <div class="ing-name">專利 GRX02 護肝益生菌</div>
