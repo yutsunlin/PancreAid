@@ -1,0 +1,624 @@
+<title>胰錠強 EX 產品特點介紹</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a2340;--soft:#f5f7fa;--cream:#fdfcfb;
+  --navy:#1B3A6B;--navy-d:#111f3e;--navy-l:#2A4F8F;
+  --teal:#0E7C76;--teal-l:#E6F5F4;--teal-m:#14B8AF;
+  --amber:#B45309;--amber-l:#FEF3C7;
+  --red:#B91C1C;--red-l:#FEE2E2;
+  --green:#166534;--green-l:#DCFCE7;
+  --gold:#e9c46a;--gold-p:#fdf8ec;
+  --muted:#718096;--border:#D4DCEA;
+  --surface:#ffffff;--surface2:#EEF2F7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:14px}
+
+/* ── TOP TAB BAR ── */
+.tab-bar{position:sticky;top:0;z-index:200;background:rgba(17,31,62,0.97);backdrop-filter:blur(8px);display:flex;border-bottom:2px solid rgba(255,255,255,0.08)}
+.tab-btn{flex:1;padding:15px 8px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.45);border:none;background:none;cursor:pointer;letter-spacing:0.04em;transition:all 0.2s;border-bottom:3px solid transparent;position:relative;top:2px;font-family:'Noto Sans TC',sans-serif;display:flex;align-items:center;justify-content:center;gap:5px}
+.tab-btn .tab-icon{font-size:14px}
+.tab-btn.active{color:#fff;border-bottom-color:var(--gold)}
+.tab-btn:hover:not(.active){color:rgba(255,255,255,0.75)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(150deg,var(--navy-d) 0%,var(--navy) 55%,#0f4a45 100%);color:white;padding:40px 24px 36px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:32px;position:relative}
+.hero-img-wrap{flex-shrink:0;width:140px;height:140px;border-radius:14px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-img-wrap img{width:100%;height:100%;object-fit:contain}
+.hero-img-placeholder{display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:11px;text-align:center}
+.hero-text{flex:1;min-width:0}
+.hero-eyebrow{font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px;font-weight:500}
+.hero h1{font-family:'Noto Serif TC',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;line-height:1.2;margin-bottom:6px;color:#fff}
+.hero-en{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:14px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.hero-tag{padding:3px 11px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85)}
+.hero-specs{display:flex;flex-wrap:wrap;gap:18px}
+.spec-item strong{display:block;color:#fff;font-size:15px;font-weight:700;line-height:1.2}
+.spec-item{font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:0.05em}
+@media(max-width:580px){.hero-inner{flex-direction:column;align-items:flex-start}.hero-img-wrap{width:100%;height:160px}}
+
+/* ── CONTAINER ── */
+.container{max-width:960px;margin:0 auto;padding:28px 16px 80px}
+
+/* ── SECTION TITLE ── */
+.sec-title{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:700;color:var(--navy);border-left:4px solid var(--navy);padding-left:10px;margin:32px 0 14px;display:flex;align-items:center;gap:8px}
+
+/* ── CARD ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;box-shadow:0 2px 12px rgba(27,58,107,.08)}
+.card+.card{margin-top:12px}
+.card-label{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+/* ── DOSE BOX ── */
+.dose-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.dose-card{border-radius:12px;padding:18px;border:1px solid var(--border);background:var(--surface)}
+.dose-card.dog{border-top:4px solid var(--navy-l)}.dose-card.cat{border-top:4px solid var(--teal)}
+.dose-animal{font-size:1.4rem;margin-bottom:4px}
+.dose-title{font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:10px}
+.dose-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed var(--border);font-size:.82rem}
+.dose-row:last-child{border-bottom:none}
+.dose-row .label{color:var(--muted)}
+.dose-row .value{font-weight:700;color:var(--ink)}
+.dose-note{margin-top:10px;font-size:.75rem;color:var(--muted);line-height:1.6;padding:8px 10px;background:var(--surface2);border-radius:7px}
+
+/* ── TIMING BOX ── */
+.timing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.timing-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.timing-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.timing-body .timing-title{font-weight:700;font-size:.85rem;color:var(--ink);margin-bottom:4px}
+.timing-body .timing-desc{font-size:.77rem;color:var(--muted);line-height:1.6}
+.timing-item.highlight{background:var(--teal-l);border-color:var(--teal-m)}
+.timing-item.caution{background:var(--amber-l);border-color:var(--amber)}
+
+/* ── LADDER ── */
+.ladder{display:flex;flex-direction:column}
+.ladder-step{display:flex;gap:16px;align-items:flex-start;padding:16px 18px;background:var(--surface);border:1px solid var(--border);position:relative}
+.ladder-step:first-child{border-radius:12px 12px 0 0}.ladder-step:last-child{border-radius:0 0 12px 12px}.ladder-step+.ladder-step{border-top:none}
+.ladder-step::before{content:'';position:absolute;left:34px;bottom:-1px;width:2px;height:100%;background:var(--border);z-index:0}.ladder-step:last-child::before{display:none}
+.step-num{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:#fff;z-index:1;position:relative}
+.s1 .step-num{background:var(--navy)}.s2 .step-num{background:var(--teal)}.s3 .step-num{background:var(--amber)}
+.step-body{flex:1;min-width:0}.step-title{font-weight:700;font-size:.9rem;color:var(--ink);margin-bottom:4px}.step-desc{font-size:.79rem;color:var(--muted);line-height:1.65}
+
+/* ── INFO BOX ── */
+.info-box{border-radius:10px;padding:14px 18px;font-size:.82rem;line-height:1.75;margin:12px 0;border-left:4px solid}
+.info-box.teal{background:var(--teal-l);border-color:var(--teal-m);color:var(--ink)}
+.info-box.navy{background:var(--surface2);border-color:var(--navy);color:var(--ink)}
+.info-box.amber{background:var(--amber-l);border-color:var(--amber);color:var(--ink)}
+.info-box.red{background:var(--red-l);border-color:var(--red);color:var(--ink)}
+.info-box.green{background:var(--green-l);border-color:var(--green);color:var(--ink)}
+.info-box strong{color:var(--navy)}
+
+/* ── PAGE 2 CONTENT ── */
+.guide-block{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.guide-block-title{font-family:'Noto Serif TC',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.point-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
+.point-list li{display:flex;align-items:flex-start;gap:10px;font-size:.82rem;line-height:1.7}
+.point-list li::before{content:'▸';color:var(--teal-m);flex-shrink:0;margin-top:2px;font-size:.85rem}
+.point-list li strong{color:var(--ink)}
+.ref-footer{margin-top:28px;padding:16px 20px;background:var(--surface2);border-radius:10px;border:1px solid var(--border);font-size:.72rem;color:var(--muted);line-height:1.85}
+.ref-footer h4{font-size:.76rem;font-weight:700;color:var(--ink);margin-bottom:8px}
+.disclaimer{margin-top:10px;padding:10px 14px;background:var(--amber-l);border-radius:8px;border-left:3px solid var(--amber);font-size:.71rem;color:var(--muted)}
+.evidence-banner{background:linear-gradient(135deg,var(--navy-d),var(--navy));color:white;border-radius:14px;padding:20px 24px;margin-bottom:24px}
+.evidence-banner h3{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:700;margin-bottom:10px}
+.evidence-banner .ref-item{font-size:.75rem;color:rgba(255,255,255,.7);line-height:1.65;margin-bottom:4px}
+.evidence-banner .ref-note{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:8px}
+
+/* ── PAGE 3 TABLE ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.78rem;min-width:560px}
+th{background:var(--navy);color:#fff;padding:10px 12px;text-align:center;font-weight:600;font-size:.76rem}
+th:first-child{text-align:left}
+td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--muted);text-align:center;vertical-align:middle}
+td:first-child{text-align:left;font-weight:600;color:var(--ink)}
+tr:nth-child(even) td{background:var(--surface2)}
+.highlight-row td{background:var(--teal-l)!important;color:var(--ink)!important}.highlight-row td:first-child{color:var(--teal)}
+.good{color:var(--green);font-weight:600}.bad{color:var(--red)}.warn{color:var(--amber)}
+.table-note{margin-top:10px;font-size:.73rem;color:var(--muted);padding:10px 14px;background:var(--surface2);border-radius:8px;border-left:3px solid var(--navy);line-height:1.7}
+
+/* ── PAGE 4 Q&A ── */
+.qna-list{display:flex;flex-direction:column;gap:12px}
+.qna-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.qna-q{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;cursor:pointer;transition:background .15s}
+.qna-q:hover{background:var(--surface2)}
+.q-badge{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;margin-top:1px}
+.q-text{flex:1;min-width:0;font-weight:600;font-size:.9rem;color:var(--ink);line-height:1.45}
+.q-arrow{flex-shrink:0;color:var(--muted);transition:transform .25s;font-size:.8rem;padding-top:3px}
+.qna-item.open .q-arrow{transform:rotate(180deg)}
+.qna-a{display:none;padding:14px 18px 18px 58px;font-size:.82rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--border)}
+.qna-item.open .qna-a{display:block}
+.qna-a ul{padding:0;margin:8px 0;list-style:none}
+.qna-a li{padding-left:14px;position:relative;margin-bottom:5px}
+.qna-a li::before{content:"▸";position:absolute;left:0;color:var(--teal-m)}
+.qna-a li ul{margin-top:4px}
+.qna-a li ul li{font-size:.78rem}
+.qna-a strong{color:var(--ink)}
+.qna-a .mini-box{background:var(--surface2);border-radius:8px;padding:11px 14px;margin:10px 0;font-size:.78rem;border-left:3px solid var(--teal-m);line-height:1.75}
+.qna-a .caution-box{background:var(--amber-l);border-radius:8px;padding:11px 14px;margin:10px 0;font-size:.78rem;border-left:3px solid var(--amber);line-height:1.75}
+
+/* ── TRIPLE GRID ── */
+.triple-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:10px}
+@media(max-width:700px){.triple-grid{grid-template-columns:1fr}}
+.triple-card{border-radius:14px;padding:18px 16px;border:1px solid var(--border);background:var(--surface)}
+.triple-card.c1{border-top:4px solid var(--navy-l)}.triple-card.c2{border-top:4px solid var(--amber)}.triple-card.c3{border-top:4px solid var(--teal)}
+.triple-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.triple-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;color:#fff}
+.c1 .triple-num{background:var(--navy-l)}.c2 .triple-num{background:var(--amber)}.c3 .triple-num{background:var(--teal)}
+.triple-label{font-size:.82rem;font-weight:700;color:var(--ink)}.triple-sub{font-size:.68rem;color:var(--muted);margin-top:1px}
+.ing-name{font-size:.79rem;font-weight:700;color:var(--ink);margin:8px 0 4px}
+.ing-detail{font-size:.73rem;color:var(--muted);line-height:1.65;list-style:none;padding:0}
+.ing-detail li{padding-left:12px;position:relative;margin-bottom:2px}
+.ing-detail li::before{content:"▸";position:absolute;left:0;color:var(--muted);font-size:.7rem}
+
+@media(max-width:480px){
+  .tab-btn{font-size:10px;padding:12px 4px}
+  .tab-btn .tab-icon{display:none}
+}
+</style>
+
+<!-- ══════════ TAB BAR ══════════ -->
+<nav class="tab-bar" id="tab-bar">
+  <button class="tab-btn active" data-tab="p1"><span class="tab-icon">💊</span> 產品介紹</button>
+  <button class="tab-btn" data-tab="p2"><span class="tab-icon">📖</span> 臨床處方依據</button>
+  <button class="tab-btn" data-tab="p3"><span class="tab-icon">📊</span> 產品比較</button>
+  <button class="tab-btn" data-tab="p4"><span class="tab-icon">💬</span> Q&amp;A</button>
+</nav>
+
+<!-- ══════════ PAGE 1：產品介紹 ══════════ -->
+<div class="tab-content active" id="p1">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-img-wrap">
+        <img src="PancreAid.jpg" alt="PancreAid EX" onerror="this.parentElement.innerHTML='<div class=hero-img-placeholder><div style=font-size:2rem>💊</div><div>產品圖片<br>PancreAid.jpg</div></div>'">
+      </div>
+      <div class="hero-text">
+        <div class="hero-eyebrow">Triple-Action Synergistic Formula</div>
+        <h1>胰錠強 EX</h1>
+        <div class="hero-en">PancreAid EX · 三位一體多軌協同配方</div>
+        <div class="hero-tags">
+          <span class="hero-tag">慢性胰臟炎</span>
+          <span class="hero-tag">急性恢復期</span>
+          <span class="hero-tag">慢性腸炎 CIE</span>
+          <span class="hero-tag">外分泌功能不足 EPI</span>
+          <span class="hero-tag">消化吸收不良</span>
+        </div>
+        <div class="hero-specs">
+          <div class="spec-item"><strong>300 mg／錠</strong>劑型規格</div>
+          <div class="spec-item"><strong>10錠 × 3排</strong>每盒含量</div>
+          <div class="spec-item"><strong>包埋技術</strong>可直接餵食</div>
+          <div class="spec-item"><strong>犬 ＆ 貓</strong>雙物種適用</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="sec-title">⚙️ 三位一體配方機轉</div>
+    <div class="triple-grid">
+      <div class="triple-card c1">
+        <div class="triple-head">
+          <div class="triple-num">①</div>
+          <div><div class="triple-label">消化支持</div><div class="triple-sub">Enzymatic &amp; Microbial Digestion</div></div>
+        </div>
+        <div class="ing-name">6X 濃縮豬源胰消化酵素</div>
+        <ul class="ing-detail">
+          <li>Protease　1.7 × 10⁸ USP/kg</li>
+          <li>Amylase　2.1 × 10⁸ USP/kg</li>
+          <li>Lipase　　2.8 × 10⁷ USP/kg</li>
+        </ul>
+        <div class="ing-name">日本專利納豆菌</div>
+        <ul class="ing-detail">
+          <li>自主分泌蛋白酶、脂肪酶、澱粉酶</li>
+          <li>微氧腸道環境持續作用</li>
+          <li>協同外源酵素優化吸收</li>
+        </ul>
+      </div>
+      <div class="triple-card c2">
+        <div class="triple-head">
+          <div class="triple-num">②</div>
+          <div><div class="triple-label">抗炎與抗氧化</div><div class="triple-sub">Anti-inflammatory &amp; Antioxidant</div></div>
+        </div>
+        <div class="ing-name">維生素 E（Tocopherol）</div>
+        <ul class="ing-detail">
+          <li>直接清除 ROS（活性氧物質）</li>
+          <li>保護腺泡細胞膜脂質過氧化</li>
+          <li>減少胰臟細胞自我消化與纖維化</li>
+        </ul>
+        <div class="ing-name">專利 GRX02 護肝益生菌</div>
+        <ul class="ing-detail">
+          <li>調節腸道—胰臟軸線（Gut-Pancreas Axis）</li>
+          <li>降低細菌微位移（Bacterial Translocation）</li>
+          <li>抑制腸源性內毒素血症（LPS）</li>
+        </ul>
+      </div>
+      <div class="triple-card c3">
+        <div class="triple-head">
+          <div class="triple-num">③</div>
+          <div><div class="triple-label">代謝與黏膜營養</div><div class="triple-sub">Metabolic &amp; Mucosal Nutrition</div></div>
+        </div>
+        <div class="ing-name">維生素 B12（Cobalamin）</div>
+        <ul class="ing-detail">
+          <li>補充 Intrinsic Factor 減少造成的 B12 缺乏</li>
+          <li>防止腸黏膜萎縮惡化</li>
+          <li>EPI / CIE 貓尤其重要</li>
+        </ul>
+        <div class="ing-name">B1・B2・B5・B6 + 牛磺酸</div>
+        <ul class="ing-detail">
+          <li>支持黏膜代謝與膽汁形成</li>
+          <li>牛磺酸為貓必需胺基酸（心臟保護）</li>
+          <li>GRX02 同步穩定腸道菌叢</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info-box teal">
+      <strong>安全優勢：</strong>包埋技術保護酵素活性，可直接餵食，無需混入濕食，大幅降低口腔與食道黏膜灼傷風險（不同於傳統散劑需充分混合才能安全使用）。
+    </div>
+
+    <div class="sec-title">💉 使用劑量</div>
+    <div class="dose-grid">
+      <div class="dose-card dog">
+        <div class="dose-animal">🐕</div>
+        <div class="dose-title">犬　建議用量</div>
+        <div class="dose-row"><span class="label">日常保健 / 慢性護理</span><span class="value">1–2 錠／餐（5–10 kg）</span></div>
+        <div class="dose-row"><span class="label">10 kg 以上</span><span class="value">2 錠／餐</span></div>
+        <div class="dose-row"><span class="label">確診 EPI（PERT）</span><span class="value">7–10 錠／餐</span></div>
+        <div class="dose-note">⚠ 確診 EPI 時，以 Spec TLI 確認，並依體重與脂肪便改善情況調整劑量。</div>
+      </div>
+      <div class="dose-card cat">
+        <div class="dose-animal">🐈</div>
+        <div class="dose-title">貓　建議用量</div>
+        <div class="dose-row"><span class="label">日常保健 / 慢性護理</span><span class="value">1 錠／餐</span></div>
+        <div class="dose-row"><span class="label">三體炎 / 慢性腸炎</span><span class="value">1–2 錠／餐</span></div>
+        <div class="dose-row"><span class="label">確診 EPI（PERT）</span><span class="value">2–7 錠／餐</span></div>
+        <div class="dose-note">⚠ 貓急性期禁食期間不使用；病情穩定開始進食後再投予。</div>
+      </div>
+    </div>
+
+    <div class="sec-title">⏱ 使用時機</div>
+    <div class="timing-grid">
+      <div class="timing-item highlight">
+        <div class="timing-icon">✅</div>
+        <div class="timing-body">
+          <div class="timing-title">急性期穩定後、開始少量進食時</div>
+          <div class="timing-desc">禁食解除後隨餐開始，提供消化支持 + 抗氧化保護，協助胰臟恢復。</div>
+        </div>
+      </div>
+      <div class="timing-item highlight">
+        <div class="timing-icon">🔄</div>
+        <div class="timing-body">
+          <div class="timing-title">慢性胰臟炎長期管理</div>
+          <div class="timing-desc">與每餐同時給予，長期使用。犬搭配低脂飲食；貓搭配水解蛋白糧。</div>
+        </div>
+      </div>
+      <div class="timing-item">
+        <div class="timing-icon">🐾</div>
+        <div class="timing-body">
+          <div class="timing-title">高風險品種日常保健</div>
+          <div class="timing-desc">雪納瑞、約克夏、貴賓等遺傳性高血脂品種，作為預防性長期補充。</div>
+        </div>
+      </div>
+      <div class="timing-item">
+        <div class="timing-icon">🐱</div>
+        <div class="timing-body">
+          <div class="timing-title">貓三體炎 / IBD 共病管理</div>
+          <div class="timing-desc">合併慢性腸炎、膽管肝炎的貓，B12 及腸道保護尤為重要。</div>
+        </div>
+      </div>
+      <div class="timing-item">
+        <div class="timing-icon">📉</div>
+        <div class="timing-body">
+          <div class="timing-title">繼發性 EPI 補充</div>
+          <div class="timing-desc">慢性胰臟炎晚期腺泡細胞嚴重耗損時，提升劑量至 PERT 標準。</div>
+        </div>
+      </div>
+      <div class="timing-item caution">
+        <div class="timing-icon">🚫</div>
+        <div class="timing-body">
+          <div class="timing-title">急性期胰臟炎（住院期間）不使用</div>
+          <div class="timing-desc">急性期胰臟正遭受自身胰酵素破壞，口服消化酵素可能加重「胰腺自我消化（Autodigestion）」。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-title">📋 三階梯式飼主衛教建議</div>
+    <div class="ladder">
+      <div class="ladder-step s1">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">嚴格飲食控制（基礎）</div>
+          <div class="step-desc"><strong>犬：</strong>終身極低脂處方飼料（脂肪 &lt;10–12% DM），絕對禁止人類餐桌食物、高脂零食。<br><strong>貓：</strong>水解蛋白處方糧或單一蛋白質飼料，降低腸道免疫反應；貓不需低脂糧。</div>
+        </div>
+      </div>
+      <div class="ladder-step s2">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">胰錠強EX 三位一體全方位保護（核心）</div>
+          <div class="step-desc">適量酵素（不刺激黏膜）＋ 抗氧化（Vit E + GRX02）＋ 補充 B12 &amp; B群<br><em>衛教比喻：「不只請工人幫忙做家事，更要修復破損的房子。」</em></div>
+        </div>
+      </div>
+      <div class="ladder-step s3">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">定期指數追蹤（監測）</div>
+          <div class="step-desc">每 3–6 個月追蹤 <strong>Spec cPL / fPL</strong>（胰臟特異性脂酶）；監測血糖／尿糖（防範繼發性糖尿病）；觀察糞便型態與體重（防範繼發性 EPI）。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-footer">
+      <h4>文獻來源（請獨立核實）</h4>
+      [1] ACVIM Consensus Statement on Pancreatitis in Dogs. J Vet Intern Med. 2021.<br>
+      [2] Steiner JM. Exocrine Pancreatic Disease. In: Ettinger's Textbook of Veterinary Internal Medicine, 9th Ed.<br>
+      [3] ISFM Guidelines for Feline Pancreatitis. J Feline Med Surg. 2022.
+      <div class="disclaimer">⚠ 本資料為醫事人員內部教育訓練用途，不得轉載或搭配行銷推廣使用。文獻引用均來自產品資料提供方，建議使用前獨立查驗文獻正確性。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE 2：臨床處方依據 ══════════ -->
+<div class="tab-content" id="p2">
+  <div class="container">
+
+    <div class="evidence-banner">
+      <h3>📖 本頁依據國際指引整理</h3>
+      <div class="ref-item">① ACVIM Consensus Statement on Pancreatitis in Cats. J Vet Intern Med. 2021;35(2):703–723.</div>
+      <div class="ref-item">② Management of acute-onset pancreatitis in dogs: a narrative review. J Am Vet Med Assoc. 2024;262(9):1107–1117.</div>
+      <div class="ref-note">※ 以下內容為上述文獻之重點整理，建議以原文為最終臨床參考依據。</div>
+    </div>
+
+    <div class="sec-title">🌐 最新國際共識重點</div>
+    <div class="guide-block">
+      <div class="guide-block-title">🐕 犬　慢性胰臟炎管理核心</div>
+      <ul class="point-list">
+        <li><strong>嚴格低脂飲食</strong>為長期管理首要基礎；通常要求脂肪含量 &lt;10–12% DM，嚴重高脂血症個體甚至需要 &lt;10% DM。高脂血症是犬慢性胰臟炎最重要的可控危險因子。</li>
+        <li><strong>抗氧化輔助治療：</strong>慢性胰臟炎的核心病理為持續性氧化壓力與微循環損傷，<strong>Vitamin E</strong> 與 <strong>SAMe（S-腺苷甲硫氨酸）</strong>是犬胰臟炎研究中最具臨床依據的抗氧化劑，具有清除自由基、保護腺泡細胞與微循環的作用。</li>
+        <li><strong>B12 常規監測與補充：</strong>胰腺受損後 Intrinsic Factor 減少，需定期評估血清 Cobalamin，缺乏時主動補充。</li>
+        <li><strong>長期追蹤 Spec cPL：</strong>即使症狀消失，胰臟仍可能處於「悶燒」狀態，每 3–6 個月複查。</li>
+        <li><strong>警戒繼發症：</strong>繼發性糖尿病（內分泌耗損）與繼發性 EPI（外分泌耗損超過 90%）需定期篩查。</li>
+      </ul>
+    </div>
+    <div class="guide-block">
+      <div class="guide-block-title">🐈 貓　慢性胰臟炎管理核心</div>
+      <ul class="point-list">
+        <li><strong>三體炎（Triaditis）管理：</strong>&gt;60% 慢性胰臟炎貓合併 IBD + 膽管肝炎，需整合治療。</li>
+        <li><strong>飲食重點在高消化率，而非極端限脂：</strong>ACVIM 明確指出，犬隻的極低脂原則不適用於貓，極端限脂對貓胰臟炎無實證效益。應選用「高度可消化、適口性高」的飲食；若懷疑併發慢性腸病（IBD／食物過敏），水解蛋白或單一蛋白飲食是極佳選擇，目標在於降低腸道免疫發炎反應。</li>
+        <li><strong>排除感染後可評估使用類固醇：</strong>在確認無感染性病因（如細菌性膽管肝炎、弓蟲症等）的前提下，針對慢性免疫性胰臟炎或併發 IBD／膽管肝炎的貓，長期低劑量 Prednisolone（逐步 Tapering）是控制慢性發炎的重要免疫調節手段；盲目使用於感染性病例可能導致病情惡化。</li>
+        <li><strong>B12 缺乏率高：</strong>貓的 Intrinsic Factor 主要由胰臟而非胃壁細胞分泌，胰臟受損後 B12 吸收即受影響，應常規監測並補充。</li>
+        <li><strong>疼痛管理不可忽視：</strong>貓腹痛常被低估，即使無明顯表現，也應主動給予 Buprenorphine 或 Gabapentin。</li>
+      </ul>
+    </div>
+
+    <div class="sec-title">⚠️ 重要觀念：消化酵素不是胰臟炎治療核心</div>
+    <div class="info-box amber">
+      <strong>國際指引明確指出：</strong>在未確診外分泌胰腺不足（EPI）的情況下，高劑量消化酵素對慢性胰臟炎的發炎控制與復發預防<strong>無臨床實證支持</strong>。在急性發炎期，大量口服酵素甚至可能刺激胰液分泌、加重消化道黏膜負擔。
+    </div>
+    <div class="guide-block">
+      <div class="guide-block-title">✅ 慢性胰臟炎長期保護的四大實證方向</div>
+      <ul class="point-list">
+        <li><strong>飲食脂肪控制（犬）/ 抗原管理（貓）：</strong>消除持續刺激胰腺的根源。</li>
+        <li><strong>抗氧化保護：</strong>Vitamin E、牛磺酸、NAC 等抗氧化劑，針對 ROS 與腺泡細胞膜損傷。</li>
+        <li><strong>B12 補充：</strong>胰臟受損後 Intrinsic Factor 減少，B12 缺乏加速黏膜萎縮與腸病惡化。</li>
+        <li><strong>腸道屏障保護：</strong>益生菌維持腸道菌叢平衡，降低細菌微位移與 LPS 誘發的二次炎症。</li>
+      </ul>
+    </div>
+    <div class="info-box navy">
+      <strong>胰錠強 EX 的設計依據：</strong>以上四個方向全部納入配方——適量酵素（減負荷而非治療）+ Vit E（抗氧化）+ GRX02（腸道保護）+ B12 & B群（微量營養素補充）。
+    </div>
+
+    <div class="sec-title">🔬 高風險品種與族群</div>
+    <div class="dose-grid">
+      <div class="card">
+        <div class="card-label">犬　高風險品種</div>
+        <div style="font-size:.82rem;color:var(--muted);line-height:1.7;margin-top:6px">
+          <strong style="color:var(--ink)">雪納瑞・約克夏・貴賓・柯基・喜樂蒂</strong><br>
+          以上品種具遺傳性高血脂（Hyperlipidemia）傾向，空腹 TG 長期偏高，胰臟微血管易因脂肪栓塞反覆發炎。建議配合嚴格低脂飲食長期補充胰錠強 EX。
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">貓　高風險個體</div>
+        <div style="font-size:.82rem;color:var(--muted);line-height:1.7;margin-top:6px">
+          <strong style="color:var(--ink)">波斯貓・暹羅貓・老年貓・慢性 IBD 貓</strong><br>
+          貓慢性胰臟炎常以「三體炎（Triaditis）」型態出現，同時合併慢性腸炎與膽管肝炎。B12 缺乏在此族群極為普遍，應主動監測並補充。
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-footer">
+      <h4>引用文獻</h4>
+      [1] Forman MA, et al. ACVIM consensus statement on pancreatitis in cats. J Vet Intern Med. 2021;35(2):703–723.<br>
+      [2] Mansfield C, et al. Management of acute-onset pancreatitis in dogs: a narrative review. J Am Vet Med Assoc. 2024;262(9):1107–1117.<br>
+      [3] Steiner JM. Exocrine Pancreatic Disease. In: Ettinger's Textbook of Veterinary Internal Medicine, 9th Ed.<br>
+      [4] Jensen KB, et al. The Gut-Pancreas Axis in Dogs and Cats. Vet Clin North Am Small Anim Pract. 2021.<br>
+      [5] ISFM Guidelines for Feline Pancreatitis. J Feline Med Surg. 2022.
+      <div class="disclaimer">⚠ 本頁為指引重點整理，僅供臨床參考，請以原始文獻為最終依據。治療決策應依個體病情與獸醫師判斷調整。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE 3：產品比較 ══════════ -->
+<div class="tab-content" id="p3">
+  <div class="container">
+
+    <div class="sec-title">📊 產品臨床比較</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>比較項目</th><th>胰錠強 EX</th><th>傳統胰消化酵素</th><th>優妙化（腸溶）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>產品定位</td><td><strong>全方位胰臟照護 + 抗氧化保健</strong></td><td>單純外源性消化酵素補充</td><td>腸溶標靶高濃縮酵素</td></tr>
+          <tr><td>劑型規格</td><td>300 mg／錠　10錠×3排</td><td>300 mg／膠囊或散劑</td><td>280 mg／腸溶膠囊</td></tr>
+          <tr><td>酵素規格</td><td>6X濃縮 Protease/Amylase/Lipase<br>＋ 納豆菌自生酵素</td><td>約 0.3 g 胰酵素粉</td><td>約 0.75 g（最高濃縮）</td></tr>
+          <tr><td>輔助保護成分</td><td class="good">✔ Vit E、B群/B12、GRX02、牛磺酸</td><td class="bad">✘ 無</td><td class="bad">✘ 無</td></tr>
+          <tr><td>黏膜安全性</td><td class="good">✔ 包埋技術，可直接餵食</td><td class="bad">⚠ 未混勻易造成口腔潰瘍出血</td><td class="warn">✔ 腸溶保護（顆粒胃排空不均）</td></tr>
+          <tr><td>日常保健用量</td><td>5–10 kg：1–2錠／餐</td><td>5 kg：1膠囊／餐</td><td class="bad">⚠ 不建議日常保健使用</td></tr>
+          <tr class="highlight-row"><td>EPI PERT 用量（犬）</td><td>7–10 錠／餐</td><td>7–10 顆／餐</td><td>3–4 顆／餐</td></tr>
+          <tr class="highlight-row"><td>EPI PERT 用量（貓）</td><td>2–7 錠／餐</td><td>2–7 顆／餐</td><td>1–3 顆／餐</td></tr>
+          <tr><td>臨床定位</td><td><strong>慢性胰臟炎長期護理首選</strong></td><td>僅為消化酵素，EPI 確診使用</td><td>EPI 高需求劑量選擇</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-note">＊消化酵素能力以等效胰酵素粉末量計算。市售豬胰濃縮粉（4–8倍）脂肪酶約 50,000–100,000 USP/2.8g，以 75,000 USP/2.8g 為平均值。PERT 用量參考 Viokase®-V 建議換算，依飲食組成與嚴重程度調整。</div>
+
+    <div class="sec-title">🐕🐈 犬貓差異對比</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>比較面向</th><th>🐕 犬</th><th>🐈 貓</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>主要病因</td><td>高脂血症・飲食脂肪・肥胖</td><td>特發性為主；腸胃共病（三體炎）</td></tr>
+          <tr><td>慢性期飲食</td><td class="good">極低脂糧 &lt;10–12% DM</td><td class="warn">水解蛋白糧（非低脂）</td></tr>
+          <tr><td>常見共病</td><td>高血脂、糖尿病、Cushing's</td><td>IBD + 膽管肝炎（三體炎 &gt;60%）</td></tr>
+          <tr><td>疼痛表現</td><td>明顯：弓背、祈禱姿</td><td>隱晦：不吃、母雞蹲、精神差</td></tr>
+          <tr><td>止吐首選</td><td colspan="2" style="text-align:center">Maropitant（NK-1，兼具止痛）</td></tr>
+          <tr><td>止痛首選（急性）</td><td>Fentanyl CRI</td><td>Buprenorphine</td></tr>
+          <tr><td>止痛（慢性）</td><td>Ketamine / Lidocaine CRI</td><td>Gabapentin（長期控制）</td></tr>
+          <tr><td>B12 缺乏風險</td><td>中等</td><td class="bad">高（IF 主要由胰臟分泌）</td></tr>
+          <tr><td>早期腸道營養</td><td>&gt;72h 未進食放鼻胃管</td><td>&gt;48h 未進食放鼻胃管</td></tr>
+          <tr><td>EPI 好發性</td><td>中等（GSD 等品種較高）</td><td>低（但一旦發生 B12 更嚴重）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box teal" style="margin-top:16px">
+      <strong>胰錠強EX 在兩物種的共同保護點：</strong><br>
+      Vitamin E（抗氧化）+ GRX02（腸軸保護）+ B12（補充缺乏）+ 牛磺酸（貓必需）的組合，同時切中犬貓慢性胰臟炎的核心病理——氧化壓力、腸道屏障失調與微量營養素流失。
+    </div>
+
+    <div class="ref-footer">
+      <h4>引用文獻</h4>
+      [1] ACVIM Consensus Statement on Pancreatitis in Dogs/Cats. J Vet Intern Med. 2021.<br>
+      [2] Mansfield C, et al. J Am Vet Med Assoc. 2024;262(9):1107–1117.
+      <div class="disclaimer">⚠ 本頁為參考資料，請以原始文獻為最終依據。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE 4：Q&A ══════════ -->
+<div class="tab-content" id="p4">
+  <div class="container">
+    <div class="info-box teal" style="margin-bottom:20px">
+      以下 Q&amp;A 針對飼主衛教設計，協助獸醫師或助理人員向飼主說明胰錠強 EX 的保健概念與正確使用方式。
+    </div>
+
+    <div class="qna-list">
+
+      <div class="qna-item">
+        <div class="qna-q">
+          <div class="q-badge">Q1</div>
+          <div class="q-text">胰錠強的成分與產品特點為何？</div>
+          <div class="q-arrow">▼</div>
+        </div>
+        <div class="qna-a">
+          胰錠強是專為 <strong>胰臟炎高風險動物</strong>（如高齡、肥胖、高血脂或高風險犬貓）及 <strong>胰臟炎預後長期護理</strong> 所設計的全方位營養保健品。
+          <br><br>主要成分包含：
+          <ul>
+            <li><strong>消化輔助（胰消化酵素 + 納豆菌）：</strong>提供適量消化酵素，減輕胰臟消化負擔與腸道壓力。</li>
+            <li><strong>抗氧化保護（維生素 E + GRX02 護肝機能益生菌）：</strong>清除自由基，降低全身性與胰腺發炎反應，同時維持腸肝軸健康。</li>
+            <li><strong>營養支持（維生素 B 群 + 維生素 B12）：</strong>補足因胰臟機能不佳或慢性腸病導致的 B12 吸收不足，支持細胞修復與能量代謝。</li>
+          </ul>
+          <div class="mini-box">從「輔助消化、抗氧化防護、營養補充」三面向，為寵物胰臟與消化道健康提供更全方位的防護網絡。</div>
+        </div>
+      </div>
+
+      <div class="qna-item">
+        <div class="qna-q">
+          <div class="q-badge">Q2</div>
+          <div class="q-text">關於犬貓胰臟炎的長期護理，最新國際權威共識為何？</div>
+          <div class="q-arrow">▼</div>
+        </div>
+        <div class="qna-a">
+          根據 ACVIM（美國獸醫內科學會）貓胰臟炎共識聲明與 WSAVA（世界小動物獸醫師協會）胃腸道指引，最新共識重點如下：
+          <ul>
+            <li><strong>飲食控制為第一線核心：</strong>
+              <ul>
+                <li>犬：嚴格控制飲食脂肪含量（低脂飲食），避免引發高脂血症及胰腺再發炎。</li>
+                <li>貓：著重於高消化率、易吸收且能同時照顧三性炎（Triaditis）的飲食，不需盲目極端限脂。</li>
+              </ul>
+            </li>
+            <li><strong>抗發炎與抗氧化管理：</strong>慢性胰臟炎本質是持續性的氧化壓力與發炎反應。共識指引強調透過抗氧化劑（如維生素 E）與微營養素來保護剩餘的胰腺腺泡細胞。</li>
+            <li><strong>維生素 B12 補充：</strong>胰臟是合成 Intrinsic Factor 的主要器官，慢性胰臟炎常導致 B12 吸收不良。ACVIM 指引明確指出，B12 缺乏會影響預後，必須定期評估並主動補充。</li>
+            <li><strong>腸道微生態照顧：</strong>加入特異性益生菌保護腸道黏膜與肝臟，是現代長期照護的重要趨勢。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="qna-item">
+        <div class="qna-q">
+          <div class="q-badge">Q3</div>
+          <div class="q-text">胰臟炎的保健，消化酵素含量是否為首要考量？</div>
+          <div class="q-arrow">▼</div>
+        </div>
+        <div class="qna-a">
+          <strong>不是，消化酵素並非唯一也不一定是首要考量。</strong>
+          <ul>
+            <li><strong>國際指引觀點：</strong>若寵物沒有確診外分泌胰腺不足（EPI）或嚴重的脂肪便，國際獸醫指引從未將高劑量消化酵素列為胰臟炎的常規第一線保健。在急性發炎期甚至應禁止大量酵素，以免刺激胰腺分泌。</li>
+            <li><strong>「高劑量酵素」的真實風險：</strong>
+              <ul>
+                <li>高濃度的未包裹酵素粉末極易造成口咽部與食道黏膜灼傷或潰瘍。</li>
+                <li>過高劑量的酵素容易引發噁心、腹瀉或腸道不適。</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="caution-box">⚠ <strong>保健核心：</strong>胰臟炎最本質的病理機制是「發炎反應」與「細胞氧化損傷」。因此，長期保養的關鍵在於減輕消化負擔、抗氧化保護、補充維生素 B12 以及維持腸道屏障，而非盲目追求極高劑量的酵素。</div>
+        </div>
+      </div>
+
+      <div class="qna-item">
+        <div class="qna-q">
+          <div class="q-badge">Q4</div>
+          <div class="q-text">如何向飼主說明最新的保健觀念，推薦胰錠強取代傳統單純補充酵素？</div>
+          <div class="q-arrow">▼</div>
+        </div>
+        <div class="qna-a">
+          建議採用 <strong>「3 階梯照護觀念」</strong> 進行溝通：
+          <div class="mini-box">
+            💬 <strong>獸醫／專業人員建議溝通話術：</strong><br><br>
+            「家長您好，過去大家以為照顧胰臟就是『狂補消化酵素』，但根據最新的國際獸醫專家指南，胰臟炎的核心問題是『發炎與氧化損傷』，而不是單純缺酵素。<br><br>
+            照顧胰臟炎或高風險的寶貝，最新的正確觀念有三個重點：<br>
+            <strong>第一步（飲食）：</strong>選對適當的處方或低脂飲食，這是最重要的基礎。<br>
+            <strong>第二步（抗發炎與營養）：</strong>胰臟發炎時會產生大量自由基，且極易影響維生素 B12 的吸收。補充抗氧化劑與維生素 B12，才能真正保護胰臟細胞並維持體力。<br>
+            <strong>第三步（適量消化支持）：</strong>只需要「適量」的消化酵素幫助減輕腸胃消化壓力即可，過量反而容易刺激黏膜。<br><br>
+            「胰錠強」就是依照這個最新觀念設計的——它不只提供適量的消化酵素，更加入了維生素 E 抗氧化、B12 營養支持，以及護肝益生菌，給胰臟最全方位的防護！」
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /qna-list -->
+
+    <div class="ref-footer">
+      <h4>Q&amp;A 資料來源</h4>
+      本頁衛教內容整合自：ACVIM Consensus Statement on Pancreatitis in Cats（J Vet Intern Med. 2021）、WSAVA Gastrointestinal Guidelines、產品技術資料（提供方）。
+      <div class="disclaimer">⚠ 本資料為醫事人員內部教育訓練用途，不得轉載或搭配行銷推廣使用。</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Tab switching ── */
+document.getElementById('tab-bar').addEventListener('click', e => {
+  const btn = e.target.closest('.tab-btn');
+  if (!btn) return;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(btn.dataset.tab).classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+/* ── Q&A accordion ── */
+document.querySelector('.qna-list').addEventListener('click', e => {
+  const q = e.target.closest('.qna-q');
+  if (!q) return;
+  const item = q.closest('.qna-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.qna-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+});
+</script>
